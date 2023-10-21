@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.2rem;
+}
+header {
+  background-color: mediumorchid;
+  color: white;
+  height: 100px;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+form {
+  width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form input,
+form select {
+  padding: 0.5rem 1rem;
+}
+input[type="text"] {
+  width: 100%;
+}
+form > button {
+  cursor: pointer;
+  background-color: mediumorchid;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+}
+form > button:hover {
+  background-color: violet;
+}
+
+ul {
+  list-style: none;
+  width: 500px;
+  margin: 2rem auto;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+}
+.close {
+  color: red;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.close:hover {
+  color: tomato;
+}
+.task-user {
+  font-weight: bold;
+}
+.task-isDone-checkbox {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.task-title {
+  margin-right: 15px;
+}
+.task-btn-delete {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+.task-btn-delete::before,
+.task-btn-delete::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  display: block;
+  width: 12px;
+  height: 2px;
+  background: crimson;
+}
+.task-btn-delete::before {
+  transform: rotate(45deg);
+}
+
+.task-btn-delete::after {
+  transform: rotate(-45deg);
+}
+.input-error {
+  border: solid 2px crimson;
+}
+.task-spinner {
+  width: 64px;
+  height: 64px;
+  background-image: url("./img/spinner.gif");
+}
+.task-spinner-wrapper {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+}
